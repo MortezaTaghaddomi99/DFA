@@ -1,8 +1,5 @@
-package ac.tla.morteza;
-
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class State {
     private Map<Character, State> tf;
@@ -46,5 +43,14 @@ public class State {
     @Override
     public int hashCode() {
         return text.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return text;
+    }
+
+    public boolean isFinal() {
+        return isFinal;
     }
 }
